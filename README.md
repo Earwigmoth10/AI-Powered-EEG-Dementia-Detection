@@ -8,15 +8,31 @@ An end-to-end machine learning web application that analyzes resting-state EEG r
 
 ##  Preview
 
-<!--
-Add your own screenshots to a folder named `assets/screenshots/` in the repo root,
-then update the image paths below to match your filenames.
--->
+###  Home Page
 
-| Home / Hero | Prediction Dashboard | Results View |
-|:---:|:---:|:---:|
-| ![Home page]<img width="1767" height="861" alt="image" src="https://github.com/user-attachments/assets/557bc1b3-c3d2-40d2-9fda-3216c36cd36e" />
- | ![Prediction dashboard](assets/screenshots/prediction.png) | ![Results](assets/screenshots/results.png) |
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/557bc1b3-c3d2-40d2-9fda-3216c36cd36e" alt="Home Page" width="100%">
+</p>
+
+<img width="1785" height="769" alt="image" src="https://github.com/user-attachments/assets/401dd6ff-0a68-4a00-aeb5-ccb0cccbbd9e" />
+
+<img width="887" height="314" alt="image" src="https://github.com/user-attachments/assets/62806902-8d2b-4c00-82fb-5e855f50c033" />
+
+---
+
+###  Prediction Dashboard
+
+<p align="center">
+  <img src="assets/screenshots/prediction.png" alt="Prediction Dashboard" width="100%">
+</p>
+
+---
+
+###  Results Page
+
+<p align="center">
+  <img src="assets/screenshots/results.png" alt="Results Page" width="100%">
+</p>
 
 ---
 
