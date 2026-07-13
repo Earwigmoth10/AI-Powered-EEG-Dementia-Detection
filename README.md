@@ -1,12 +1,12 @@
-# 🧠 AI-Powered EEG Dementia Detection System
+#  AI-Powered EEG Dementia Detection System
 
 An end-to-end machine learning web application that analyzes resting-state EEG recordings to assist in distinguishing between **Alzheimer's Disease (AD)**, **Frontotemporal Dementia (FTD)**, and **Healthy Control (HC)** subjects — built with a Flask backend, a scikit-learn/XGBoost inference pipeline, and a responsive vanilla JS/HTML/CSS frontend.
 
-> ⚠️ **Disclaimer:** This project is a university AI research project and decision-support prototype only. It is **not** a certified medical device and must **not** be used for real clinical diagnosis.
+>  **Disclaimer:** This project is a university AI research project and decision-support prototype only. It is **not** a certified medical device and must **not** be used for real clinical diagnosis.
 
 ---
 
-## 📸 Preview
+##  Preview
 
 <!--
 Add your own screenshots to a folder named `assets/screenshots/` in the repo root,
