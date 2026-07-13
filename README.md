@@ -15,7 +15,8 @@ then update the image paths below to match your filenames.
 
 | Home / Hero | Prediction Dashboard | Results View |
 |:---:|:---:|:---:|
-| ![Home page](assets/screenshots/home.png) | ![Prediction dashboard](assets/screenshots/prediction.png) | ![Results](assets/screenshots/results.png) |
+| ![Home page]<img width="1767" height="861" alt="image" src="https://github.com/user-attachments/assets/557bc1b3-c3d2-40d2-9fda-3216c36cd36e" />
+ | ![Prediction dashboard](assets/screenshots/prediction.png) | ![Results](assets/screenshots/results.png) |
 
 ---
 
