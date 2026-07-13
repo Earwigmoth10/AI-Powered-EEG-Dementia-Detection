@@ -22,21 +22,23 @@ An end-to-end machine learning web application that analyzes resting-state EEG r
 
 ###  Prediction Dashboard
 
-<p align="center">
-  <img src="assets/screenshots/prediction.png" alt="Prediction Dashboard" width="100%">
-</p>
+<img width="1692" height="669" alt="image" src="https://github.com/user-attachments/assets/cfa9e206-5f24-4818-9c5b-fe89b4bd6323" />
+
 
 ---
 
 ###  Results Page
 
-<p align="center">
-  <img src="assets/screenshots/results.png" alt="Results Page" width="100%">
-</p>
+<img width="1681" height="459" alt="image" src="https://github.com/user-attachments/assets/587dff34-acf3-4884-80ab-48e3b4212a42" />
+<img width="1670" height="423" alt="image" src="https://github.com/user-attachments/assets/d3bf4fa2-40d1-406f-a2d9-d94c2522fbc4" />
+<img width="1669" height="682" alt="image" src="https://github.com/user-attachments/assets/4a6ebb18-b66a-497d-854c-8eaef8555f09" />
+<img width="1696" height="753" alt="image" src="https://github.com/user-attachments/assets/4338ea96-a5ed-47f6-bdec-2cf88fcf413b" />
+
+<img width="555" height="779" alt="image" src="https://github.com/user-attachments/assets/9bd9378f-eb02-4fd0-9dff-5066612345f1" />
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#-overview)
 - [Dataset](#-dataset)
@@ -55,7 +57,7 @@ An end-to-end machine learning web application that analyzes resting-state EEG r
 
 ---
 
-## 🔍 Overview
+##  Overview
 
 This system applies machine learning to raw EEG signals to support **non-invasive, faster screening** for dementia-related neurodegeneration. Users upload an EEG recording through the web dashboard, pick a classification mode, and receive back a prediction, a confidence score, and a full class-probability breakdown — all rendered in an interactive, chart-backed results panel.
 
@@ -68,7 +70,7 @@ Two prediction modes are supported:
 
 ---
 
-## 🗂 Dataset
+##  Dataset
 
 This project is trained on the **[OpenNeuro ds004504](https://openneuro.org/datasets/ds004504/versions/1.0.9)** dataset:
 
@@ -90,18 +92,18 @@ If you use this dataset, please cite the original paper (see [Citation](#-citati
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🧠 **EEG Signal Analysis** — band-power feature extraction (delta, theta, alpha, beta) per channel, per epoch
-- ⚡ **Fast AI Prediction** — inference completes in seconds via a pre-trained scikit-learn/XGBoost pipeline
-- 📊 **Confidence & Probability Breakdown** — every prediction returns a calibrated confidence score plus per-class probabilities
-- 🏥 **Clinical-style Decision Support** — plain-language disease descriptions alongside each prediction
-- 📄 **Downloadable PDF Report** — generate and export a report of the prediction results (via jsPDF)
-- 📱 **Responsive, Accessible UI** — mobile-friendly frontend with semantic HTML and ARIA labeling
+-  **EEG Signal Analysis** — band-power feature extraction (delta, theta, alpha, beta) per channel, per epoch
+-  **Fast AI Prediction** — inference completes in seconds via a pre-trained scikit-learn/XGBoost pipeline
+-  **Confidence & Probability Breakdown** — every prediction returns a calibrated confidence score plus per-class probabilities
+-  **Clinical-style Decision Support** — plain-language disease descriptions alongside each prediction
+-  **Downloadable PDF Report** — generate and export a report of the prediction results (via jsPDF)
+-  **Responsive, Accessible UI** — mobile-friendly frontend with semantic HTML and ARIA labeling
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
 ```
  1. Upload EEG File          →  User uploads a .set (EEGLAB) recording via the dashboard
@@ -127,7 +129,7 @@ EEGLAB .set file
 
 ---
 
-## 🗃 Project Structure
+##  Project Structure
 
 ```
 week 1/
@@ -167,7 +169,7 @@ week 1/
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 **Backend**
 - [Flask](https://flask.palletsprojects.com/) + Flask-CORS
@@ -185,7 +187,7 @@ week 1/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Python 3.10+
@@ -237,7 +239,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 📡 API Reference
+##  API Reference
 
 ### `POST /predict`
 
@@ -247,8 +249,8 @@ Runs a prediction on an uploaded EEG file.
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `file` | file | ✅ | EEG recording (`.set`, `.edf`, `.csv`, `.mat`, `.txt`, `.npy`) |
-| `model` | string | ✅ | `binary` or `three-class` |
+| `file` | file |  | EEG recording (`.set`, `.edf`, `.csv`, `.mat`, `.txt`, `.npy`) |
+| `model` | string |  | `binary` or `three-class` |
 
 **Example (`curl`):**
 
@@ -287,7 +289,7 @@ curl -X POST http://127.0.0.1:5000/predict \
 
 ---
 
-## 🤖 Model Details
+##  Model Details
 
 | Pipeline | Input Features | Status |
 |---|---|---|
@@ -298,7 +300,7 @@ Both pipelines use scikit-learn-compatible classifiers (trained in `gsp-alzheime
 
 ---
 
-## ⚠️ Known Limitations
+##  Known Limitations
 
 - **Binary pipeline uses mock features.** The graph-signal-processing feature extraction used during binary-model training was not ported into `predict.py`; `extract_mock_features_binary()` currently returns placeholder values. **Do not trust binary-mode predictions** until this is replaced with the real feature pipeline.
 - The three-class pipeline currently only accepts **EEGLAB `.set`** files for real inference; other accepted extensions (`.csv`, `.edf`, `.mat`, `.txt`, `.npy`) are validated on upload but do not yet have matching feature-extraction code paths.
@@ -306,7 +308,7 @@ Both pipelines use scikit-learn-compatible classifiers (trained in `gsp-alzheime
 
 ---
 
-## 🗺 Roadmap
+##  Roadmap
 
 - [ ] Port real feature-extraction pipeline into `extract_mock_features_binary()`
 - [ ] Add support for `.edf`, `.csv`, `.mat`, `.npy` feature extraction paths
@@ -316,7 +318,7 @@ Both pipelines use scikit-learn-compatible classifiers (trained in `gsp-alzheime
 
 ---
 
-## 📚 Citation
+##  Citation
 
 If you use this project or the underlying dataset, please cite:
 
@@ -337,13 +339,13 @@ Dataset DOI: [10.18112/openneuro.ds004504](https://doi.org/10.18112/openneuro.ds
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the [MIT License](LICENSE). The underlying dataset (OpenNeuro ds004504) is released under **CC0**.
 
 ---
 
-## 📬 Contact
+##  Contact
 
 Developed as a university Artificial Intelligence project.
 
